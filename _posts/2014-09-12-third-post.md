@@ -1,30 +1,36 @@
 ---
-title: Third Post
-author: Chris
+title: Functional Ecology
+author: Sergio Marconi
 layout: post
 icon: fa-lightbulb
 icon-style: regular
 ---
-See the icon?
 
-Lorem ipsum dolor sit amet, harum malorum nominavi mea et. Atqui maluisset duo cu, summo dignissim voluptatum sit ut. Ad quo quidam delicatissimi. Cum nihil noster patrioque id. Per at maiorum definitiones. Cu vix sint aliquip. No duo alia sale persecuti.
+#### Why we do care so much about biodiversity? Do we care about species, what they represent, or maybe both?
 
-<span class="image left"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
+<span class="image right"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
+Figure 1 from http://www.pcn.minambiente.it
+These questions are the center of Functional Ecology, a branch of Ecology focusing on the functions that biological units (i.e. individuals, species) have in a community at the scale of study (Calow, 1987). The term “function” emphasizes physiological processes. It is associated with the concept of functional trait, which is a set of chemical physical characteristics directly involved in ecological processes. For example, leaf nitrogen and thickness are functional traits involved in photosynthesis and resources distribution in plants. They are not just chemical concentrations, but describe the role of particular plants in a trophic system, the effects of abiotic/biotic interaction (such as competition and facilitation) among organisms.
 
-Pri id consul meliore luptatum, vix iudico impetus salutatus eu, duo at causae admodum complectitur. Qui eu salutandi dignissim, ea dictas audire commodo eos, vim cu autem dicam. Novum placerat moderatius sea ex, debet labitur reprehendunt mei ad. Tempor theophrastus et est, id tollit ponderum usu, at vis consul detraxit. Sit ut adhuc aeque.
+With this perspective, functional ecology can also represent the link to understand general rules in Community Ecology (McGill et al., 2006), a field where, before Lawton (1999) and Simberloff (2004), suggested that finding general rules is an unachievable aim, given the complex nature of communities.
 
-Ut eum labore antiopam. Cum eu modus rationibus. Illud deleniti cum cu. At vix illum vitae tation, solet oporteat complectitur at vel. Vim te simul eleifend, et per insolens conceptam, ad sint posidonium est. Ad vocent propriae principes duo.
+If that’s so, how much better are we doing almost 15 years later? Not enough. James Clark
 
-Audire periculis id vis, cum eu sonet option patrioque, his dicam sanctus imperdiet ad. Ad sonet dolorum est. Eu dolore adipisci volutpat mei, eu nec nisl molestiae. Usu ad veri omnesque pertinacia, duis scripserit ad nam. Quo id eligendi legendos.
+<span class="image right"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
+Figure 2 Chemical traits map for a forest in Honduras ()
+(2016) shows that, given the state of the art, species labels are still a better predictor of traits, than any direct effect of the environment on an individual’s traits. Though it may seem a paradox, the reality is traits data is expensive and difficult to collect, and so sample design is often biased on particular species, individual sizes, and traits. For example, the National Ecological Observatory Network (NEON) will collect biogeochemical plant traits from three individuals of the most common species in 1600m2 plots. They will target dominant trees and collect only a subsample of traits. What about rare species? What about the other thousands of individuals in the same landscape? What about non-sampled traits?
 
-Eos cu partiendo vituperatoribus. Mel id duis delenit atomorum, mei tamquam nostrum ne, id eum hinc decore mediocrem. Mei feugiat habemus tincidunt ut, atqui detraxit ex usu. Vix ad commodo eripuit alienum, an has idque delicatissimi. Dolores reformidans mel ne, duis numquam disputando quo te.
+To address this issue, University of Florida’s WEecology and Bohlman labs are developing methods to indirectly measure leaf chemical traits for each plant visible from the canopy. These methods rely on the use of high spectral and spatial resolution remote sensing. These methods will also identify which tree types to collect more data from to reduce sample design bias.
 
-Eum eu tritani accusata qualisque, pro ei purto vocent. Vim in insolens hendrerit similique. Nobis munere antiopam ei vix. Cum no labore partiendo conceptam. Sea id vide viderer mandamus, magna posidonium nam at. Ad populo persius duo, vel audire detracto scribentur ut.
+Once we have those estimates, how may we look into functional diversity to better address global change issues and unify Ecology across scales?  Well, we can think about it together, next month.
 
-Vim te fastidii sententiae. Vix ad facilis gloriatur, mei an diceret iracundia vituperatoribus. Iudico consetetur dissentiunt pri ut. Consul dictas pri ne. Nec an alia volumus scaevola, eos movet deleniti argumentum te. Latine abhorreant his ad, ut modus tempor euismod pri.
+#### References:
 
-Amet illum at sea, est autem fabulas eu, quod nonumes lobortis no sed. Has ei fugit adipisci reprimique. Enim tamquam ornatus pri ei. Alii harum invidunt nec ex, pri vidit latine ne. Has vocent nominati rationibus ad, ex partiendo prodesset moderatius has, vim quod paulo ad. Ex nec etiam electram, pri illud appetere eu.
+McGill, B. J., Enquist, B. J., Weiher, E., & Westoby, M. (2006). Rebuilding community ecology from functional traits. Trends in ecology & evolution, 21(4), 178-185.
 
-An nobis instructior eos, eam libris aperiam corrumpit ex. Case omnesque eu per. Et vix iisque tritani. Autem posidonium eu vis, sit et mutat brute. Usu ne postulant intellegat omittantur, mazim saperet adolescens mel at.
+Lawton, J. H. (1999). Are there general laws in ecology?. Oikos, 177-192.
+Calow, P. (1987). Towards a definition of functional ecology. Functional Ecology, 1(1), 57-61.
 
-Nam at velit percipit detraxit, quas modus mea ut. Ius an natum doctus vivendum. Quo at debet vidisse viderer, mollis eripuit ex nec. Sed ut choro saepe, sale augue sea et. His nemore dolorum mnesarchum at, ius an adipisci aliquando, laoreet placerat ea ius.
+Simberloff, D. (2004). Community Ecology: Is It Time to Move On? (An American Society of Naturalists Presidential Address). The American Naturalist, 163(6), 787-799.
+
+Clark, J. S. (2016). Why species tell more about traits than traits about species: predictive analysis. Ecology, 97(8), 1979-1993.
