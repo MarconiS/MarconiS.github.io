@@ -7,7 +7,7 @@ permalink: /MarconiS/
 
 ## Crown segmentation and identification with LiDAR and Hiperspectral data
 
-In this module we will learn to use LiDAR and hyperspectral data to automatically extract ecological information about individual trees at landscape scale. 
+In this module we will learn to use LiDAR and hyperspectral data to automatically extract ecological information about individual trees at landscape scale.
 
 
 ### Before starting, you will need:
@@ -26,7 +26,7 @@ In this module we will learn to use LiDAR and hyperspectral data to automaticall
   10. `FactoMineR`
   11. `caret`
 
-* We suggest you to have the libraries `rlas` and `lidR` installed from latest version on github. 
+* We suggest you to have the libraries `rlas` and `lidR` installed from latest version on github.
 
 
 #### Delineation from LiDAR module:
@@ -37,7 +37,7 @@ In this module we will learn to use LiDAR and hyperspectral data to automaticall
 
 #### Species classification from hyperspectral module:
 - Pre-processing of hyperspectral pixels
-- Stratified sampling by species 
+- Stratified sampling by species
 - Applying a Support Vector Machine (SVM) to the data (the easy way)
 - (tuning SVM parameters with 10-fold Cross Validation (10k-CV))
 - Crown predictions and confusion proportions
@@ -61,7 +61,7 @@ library(readr)
 library("rgdal")
 ```
 
-Next step, we want to identify the path of the data to be loaded. In this first section we'll load a LiDAR point-cloud file `.laz`, an hyperspectral image `.tif`, and some ground data tree polygons `.shp`. First, let's point to the path where the data is sitting. 
+Next step, we want to identify the path of the data to be loaded. In this first section we'll load a LiDAR point-cloud file `.laz`, an hyperspectral image `.tif`, and some ground data tree polygons `.shp`. First, let's point to the path where the data is sitting.
 
 Then, we'll get the name of the files we are interested to load. To have it automatically done, we'll use the function `list.files`, which returns a character vector, with the name of each single file respecting a defined `pattern`
 
@@ -84,7 +84,7 @@ Now, we can plot our pointcloud data for a cool 3D view!
 plot(las, color="Intensity", colorPalette = terrain.colors(50), trim=0.95)
 ```
 ![classified_las](figures/lidar_perspective.png)
- 
+
 
 Not happy with the color palette? you can actually take advantage of the hyperspectral information to add a cool false color palette to your point-cloud view. Let's see how.
 Let's first load our data as a raster stack. Raster stack are way faster than common rasters and allow us to work with rasters with a very high number of bands.We can plot, for example, the combination of band 16, 86 and 177 using 'plotRGB'
@@ -96,17 +96,17 @@ image_rgb <- stack(hps[[86]], hps[[177]],hps[[16]])
 
 ```
 
-![false_color_hps](figures/false_color_hsp.png) 
+![false_color_hps](figures/false_color_hsp.png)
 
-Not bad, right? they seem good enough to color our point cloud pixels. Let's extract and normalize them: 
+Not bad, right? they seem good enough to color our point cloud pixels. Let's extract and normalize them:
 
 ```{r}
 ch1 = image_rgb@layers[[1]]
 ch2 = image_rgb@layers[[2]]
 ch3 = image_rgb@layers[[3]]
-ch1[ch1 >10000] = 0 
-ch2[ch2 >10000] = 0 
-ch3[ch3 >10000] = 0 
+ch1[ch1 >10000] = 0
+ch2[ch2 >10000] = 0
+ch3[ch3 >10000] = 0
 ch1 = stretch(ch1)
 ch2 = stretch(ch2)
 ch3 = stretch(ch3)
@@ -129,9 +129,9 @@ plot(las, color = "color")
 ![classified_las](figures/lidar_false_color.png)
 
 
-### Create a Canopy Height Model 
+### Create a Canopy Height Model
 
-Now that we have point cloud data we can use that directly to predict crowns shape and position, or we can produce a raster file, to be used to perform crown delineation with other types of algorithms. NEON produces already canopy height models, but of "only" 1m2 resolution. 
+Now that we have point cloud data we can use that directly to predict crowns shape and position, or we can produce a raster file, to be used to perform crown delineation with other types of algorithms. NEON produces already canopy height models, but of "only" 1m2 resolution.
 Don't you want more? Let's check how to get a 0.5m2 resolution CHM!
 
 ```{r}
@@ -140,7 +140,7 @@ chm = as.raster(chm)
 plot(chm)
 ```
 ![chm_unsmoothed](figures/chm_no_blur.png)
- 
+
 
 Unfortunately, LiDAR point cloud data may be noisy. This can be a problem especially if we go so high resolution. In fact, is a good practice to filter blur the image, just a little, avoiding big artifacts and unnatural crowns
 
@@ -174,7 +174,7 @@ plot(crowns, col = random.colors(length(crowns)))
 Now, we happily have produced a raster with single crowns, which you can transform in a polygon layer, if you want (for time sake, that's not something we'll do here).
 *What can we do with these crowns, though?*
 
-Most of the time, in Forestry and Ecology, we collect a sample of data, and that's what we use for assessments. *What if we could align data collected on the field with the remote sensing data, and use their combination to have better more comprehensive information?* 
+Most of the time, in Forestry and Ecology, we collect a sample of data, and that's what we use for assessments. *What if we could align data collected on the field with the remote sensing data, and use their combination to have better more comprehensive information?*
 Well, it would be awesome, no!? Let's see how to!
 First of all, let's load part of the data published from a recent Data Science Evaluation (ref):
 
@@ -224,7 +224,7 @@ library(FactoMineR)
 library(caret)
 ```
 
-Now, let's load some data extracted already in a csv form. These data have the crown identifier, the species, tree height, and spectral reflectance in 426 bands for a bunch of pixels (and 305 individual trees). Data are publicly available as part of a data science competition (Marconi et al., in prep). The whole dataset can be downloaded at: LINK, but for the sake of this workshop, just use the data in the inputs folder. 
+Now, let's load some data extracted already in a csv form. These data have the crown identifier, the species, tree height, and spectral reflectance in 426 bands for a bunch of pixels (and 305 individual trees). Data are publicly available as part of a data science competition (Marconi et al., in prep). The whole dataset can be downloaded at: LINK, but for the sake of this workshop, just use the data in the inputs folder.
 
 First step, let's import our features (*hyper_bands_train.csv*) and response variables (*species_id_train.csv*)
 
@@ -274,7 +274,7 @@ pca_features <- cbind(features[1], pca_summary$ind$coord)
 ```
 ![pca1](figures/pca_components.png) ![pca2](figures/pca_position.png)
 
-Now, extremely important when using machine learning methods, is to divide your dataset into a portion used to build the model, and a fully independent dataset, to test if our model is working fine. Those are called respectively `trainset` and `testset`. Generally, you may want to divide the `trainset` in `train` and `validation`, whihc in this case is automatically happening when using cross validation. 
+Now, extremely important when using machine learning methods, is to divide your dataset into a portion used to build the model, and a fully independent dataset, to test if our model is working fine. Those are called respectively `trainset` and `testset`. Generally, you may want to divide the `trainset` in `train` and `validation`, whihc in this case is automatically happening when using cross validation.
 
 Further problem, our dataset is not well balanced: 70% of our trees are *Pinus palustris* (PIPA), and each species may have a different average number of pixels per crow because of the canopy structure. We want to sample our dataset in a **stratified** way. In short, we want to select crowns to be in a ratio of 0.8 to 0.2 stratified by species.
 
@@ -283,7 +283,7 @@ Further problem, our dataset is not well balanced: 70% of our trees are *Pinus p
 # divide data in training, validation, and test
 length(unique(features$crown_id))
 set.seed(1)
-test_data <- speciesID %>% 
+test_data <- speciesID %>%
   group_by(species_id) %>%
   sample_frac(0.2)
 train_data <- speciesID[!(speciesID$crown_id %in% test_data$crown_id), ]
@@ -341,7 +341,7 @@ In SVM, that can be done using the function `tune`:
 ```{r}
 svm_tune <- tune(svm, train.x = x, train.y = y, gamma = 2^(-1:1), cost = 2^(2:4))
 best_mod <- svm_tune$best.model
-best_mod_pred <- predict(best_mod, data = x) 
+best_mod_pred <- predict(best_mod, data = x)
 plot(y, best_mod_pred, pch=4)
 confusionMatrix(y, best_mod_pred)
 
@@ -377,7 +377,7 @@ svm_accuracy
 
 # [1] 0.7101086
 ```
-See? performance naturally go lower on independent data! 
+See? performance naturally go lower on independent data!
 
 ```{r}
 pred_best_mod_test <- predict(best_mod, newdata = x)
@@ -418,7 +418,7 @@ prob_vector_test$species_id <- levels(pred_test)[prob_vector_test$species_id]
 # create confusion matrix
 frequency <- prob_vector_test %>%
   select(-(n))%>%
-  spread(crown_id, freq) 
+  spread(crown_id, freq)
 frequency <- t(frequency)
 colnames(frequency) <- frequency[1,]
 frequency <- frequency[-1,]
@@ -439,7 +439,7 @@ svm_accuracy
 
 # [1] 0.8032787
 ```
-Weeeell you see? crowns based predictions boost up our rank-1 accuracy a lot, right? Yet, there is a bunch of other cool stuff you can do to make it better, like reduce the amount of predictors by performing PCA, normalize the variance of our predictors, or even chose a more promising algorithm! Now you have the data: you can play to find a better solution than this baseline! 
+Weeeell you see? crowns based predictions boost up our rank-1 accuracy a lot, right? Yet, there is a bunch of other cool stuff you can do to make it better, like reduce the amount of predictors by performing PCA, normalize the variance of our predictors, or even chose a more promising algorithm! Now you have the data: you can play to find a better solution than this baseline!
 
 Last piece of details: try to calculate the confusion matrix:
 ```{r}
