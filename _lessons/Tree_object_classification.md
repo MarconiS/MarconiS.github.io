@@ -1,7 +1,11 @@
 ---
+title: Functional Ecology
+author: Sergio Marconi
 layout: page
-title:  Ecology with NEON AOP
-permalink: /MarconiS/
+icon: fa-graduation-cap
+icon-style: regular
+order: 3
+
 ---
 
 
