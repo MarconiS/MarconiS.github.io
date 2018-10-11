@@ -4,4 +4,4 @@ icon: fa-check
 order: 5
 ---
 
-This Jekyll theme was developed by [GitHub repository](https://github.com/chrisbobbe/jekyll-theme-prologue). 
+The Jekyll theme Prologue used for this website was first developed by [Chris Bobbe](https://github.com/chrisbobbe/jekyll-theme-prologue). 
