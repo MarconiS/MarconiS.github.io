@@ -1,7 +1,7 @@
 ---
 title: Tree segmentation and Classification
 author: Sergio Marconi
-layout: "page"
+layout: "lesson"
 icon: fa-graduation-cap
 icon-style: regular
 
