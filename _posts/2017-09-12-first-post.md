@@ -6,11 +6,14 @@ icon: fa-lightbulb
 icon-style: regular
 ---
 
-#### Why we do care so much about biodiversity? Do we care about species, what they represent, or maybe both?
-
-<span class="image right"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="" /></span>
-Figure 1 from http://www.pcn.minambiente.it
+### Why we do care so much about biodiversity? Do we care about species, what they represent, or maybe both?
+<br/>
+<span class="image right"><img src="{{ 'assets/images/pic08.jpg' | relative_url }}" alt="" /></span>
+<br/>
 These questions are the center of Functional Ecology, a branch of Ecology focusing on the functions that biological units (i.e. individuals, species) have in a community at the scale of study (Calow, 1987). The term “function” emphasizes physiological processes. It is associated with the concept of functional trait, which is a set of chemical physical characteristics directly involved in ecological processes. For example, leaf nitrogen and thickness are functional traits involved in photosynthesis and resources distribution in plants. They are not just chemical concentrations, but describe the role of particular plants in a trophic system, the effects of abiotic/biotic interaction (such as competition and facilitation) among organisms.
+
+
+Figure 1 from http://www.pcn.minambiente.it
 
 With this perspective, functional ecology can also represent the link to understand general rules in Community Ecology (McGill et al., 2006), a field where, before Lawton (1999) and Simberloff (2004), suggested that finding general rules is an unachievable aim, given the complex nature of communities.
 
