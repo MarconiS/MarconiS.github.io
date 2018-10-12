@@ -53,10 +53,15 @@ linkedin_url:
 github_url: "https://github.com/MarconiS/"
 pinterest_url:
 slack_url:
-dribbble_url:
+researchgate: "https://www.researchgate.net/profile/Sergio_Marconi"
+bio: "PhD Student @ the University of Florida"
+location: "Gainesville, FLorida, USA"
+employer: "WEecology"
+googlescholar: "https://scholar.google.com/citations?hl=en&user=_JJzuYAAAAAJ"
+email: "sergio.marconi@weecology.org"
 
 # Google Analytics Tracking ID goes here:
-google_analytics:
+google_analytics: #"google-universal"
 
 plugins:
   - jekyll-sitemap
