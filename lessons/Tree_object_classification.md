@@ -1,10 +1,9 @@
 ---
 title: Functional Ecology
 author: Sergio Marconi
-layout: page
+layout: "page"
 icon: fa-graduation-cap
 icon-style: regular
-order: 3
 
 ---
 
@@ -46,7 +45,7 @@ In this module we will learn to use LiDAR and hyperspectral data to automaticall
 - (tuning SVM parameters with 10-fold Cross Validation (10k-CV))
 - Crown predictions and confusion proportions
 
-### Some background
+## Some background
 
 
 
