@@ -1,5 +1,5 @@
 ---
-title: Functional Ecology
+title: Tree segmentation and Classification
 author: Sergio Marconi
 layout: "page"
 icon: fa-graduation-cap
