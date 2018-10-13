@@ -51,13 +51,12 @@ googleplus_url:
 instagram_url:
 linkedin_url:
 github_url: "https://github.com/MarconiS/"
-pinterest_url:
-slack_url:
-researchgate: "https://www.researchgate.net/profile/Sergio_Marconi"
+publons_url: "http://publons.com/a/1499258/"
+researchgate_url: "https://www.researchgate.net/profile/Sergio_Marconi"
 bio: "PhD Student @ the University of Florida"
 location: "Gainesville, FLorida, USA"
 employer: "WEecology"
-googlescholar: "https://scholar.google.com/citations?hl=en&user=_JJzuYAAAAAJ"
+googlescholar_url: "https://scholar.google.com/citations?hl=en&user=_JJzuYAAAAAJ"
 email: "sergio.marconi@weecology.org"
 
 # Google Analytics Tracking ID goes here:
