@@ -63,8 +63,8 @@ email: "sergio.marconi@weecology.org"
 google_analytics: #"google-universal"
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-feed
+  #- jekyll-sitemap
+#  - jekyll-feed
 
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: chrisbobbe/jekyll-theme-prologue
